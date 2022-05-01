@@ -1,2 +1,2 @@
-# PEVS-PANI-TIP_Technologie_Inteligentneho_Prostredia
+#  Technológie Inteligentného Prostredia [TIP] (PEVS-PANI)
 ⚙️ Zdrojové kódy a projekty z predmetu Technológie Inteligentného Prostredia [TIP] na PEVS/PANI
