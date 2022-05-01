@@ -1,0 +1,572 @@
+[
+    {
+        "id": "e0aecc10b2bab265",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c88de5df6312349f",
+        "type": "mqtt in",
+        "z": "e0aecc10b2bab265",
+        "name": "Temperature",
+        "topic": "sensor/temp",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4d9938f8f6a47d76",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "3ef394e3299b69ef"
+            ]
+        ]
+    },
+    {
+        "id": "3ef394e3299b69ef",
+        "type": "json",
+        "z": "e0aecc10b2bab265",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 270,
+        "y": 120,
+        "wires": [
+            [
+                "d66de1c491961833",
+                "237958475afd5fec",
+                "97646a2133662e17"
+            ]
+        ]
+    },
+    {
+        "id": "d66de1c491961833",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "9dc56dc146cb9f6e"
+            ]
+        ]
+    },
+    {
+        "id": "237958475afd5fec",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "DeviceID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.deviceId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 140,
+        "wires": [
+            [
+                "e356898af3a1ccbb"
+            ]
+        ]
+    },
+    {
+        "id": "97646a2133662e17",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "Date",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.date",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "1e3608f1822782c5"
+            ]
+        ]
+    },
+    {
+        "id": "c5fdbb7521cddef6",
+        "type": "mqtt in",
+        "z": "e0aecc10b2bab265",
+        "name": "Humidity",
+        "topic": "sensor/hum",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4d9938f8f6a47d76",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "efac64a10f02e4dc"
+            ]
+        ]
+    },
+    {
+        "id": "efac64a10f02e4dc",
+        "type": "json",
+        "z": "e0aecc10b2bab265",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 270,
+        "y": 260,
+        "wires": [
+            [
+                "2e6a8d15fed61fa6",
+                "7f5aa1cfd31c4797",
+                "52271565263c51f6"
+            ]
+        ]
+    },
+    {
+        "id": "2e6a8d15fed61fa6",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "4040b6df06f51206"
+            ]
+        ]
+    },
+    {
+        "id": "7f5aa1cfd31c4797",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "DeviceID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.deviceId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "c0f8d8a7940a7844"
+            ]
+        ]
+    },
+    {
+        "id": "52271565263c51f6",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "Date",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.date",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "ce99e19f99a62566"
+            ]
+        ]
+    },
+    {
+        "id": "2491b0a79294a744",
+        "type": "mqtt in",
+        "z": "e0aecc10b2bab265",
+        "name": "Luminosity",
+        "topic": "sensor/lumin",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4d9938f8f6a47d76",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 400,
+        "wires": [
+            [
+                "53bf1bf58d8c0b39"
+            ]
+        ]
+    },
+    {
+        "id": "53bf1bf58d8c0b39",
+        "type": "json",
+        "z": "e0aecc10b2bab265",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 270,
+        "y": 400,
+        "wires": [
+            [
+                "885664ef7cedf404",
+                "216c9b77ed332bc9",
+                "6463f1dd2989459b"
+            ]
+        ]
+    },
+    {
+        "id": "885664ef7cedf404",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "Luminosity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "8307f3a45659fcc2"
+            ]
+        ]
+    },
+    {
+        "id": "216c9b77ed332bc9",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "DeviceID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.deviceId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "ba908cbae71b9693"
+            ]
+        ]
+    },
+    {
+        "id": "6463f1dd2989459b",
+        "type": "change",
+        "z": "e0aecc10b2bab265",
+        "name": "Date",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.date",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 500,
+        "wires": [
+            [
+                "39752ca60e36ccfe"
+            ]
+        ]
+    },
+    {
+        "id": "9dc56dc146cb9f6e",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "Temperature",
+        "measurement": "sensor/temp/value",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 690,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e356898af3a1ccbb",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "DeviceID",
+        "measurement": "sensor/temp/deviceid",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 680,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1e3608f1822782c5",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "Date",
+        "measurement": "sensor/temp/date",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4040b6df06f51206",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "Temperature",
+        "measurement": "sensor/hum/value",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 690,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c0f8d8a7940a7844",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "DeviceID",
+        "measurement": "sensor/hum/deviceid",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 680,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ce99e19f99a62566",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "Date",
+        "measurement": "sensor/hum/date",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "8307f3a45659fcc2",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "Temperature",
+        "measurement": "sensor/lumin/value",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 690,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ba908cbae71b9693",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "DeviceID",
+        "measurement": "sensor/lumin/deviceid",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 680,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "39752ca60e36ccfe",
+        "type": "influxdb out",
+        "z": "e0aecc10b2bab265",
+        "influxdb": "459bd2d2e3c31485",
+        "name": "Date",
+        "measurement": "sensor/lumin/date",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "4d9938f8f6a47d76",
+        "type": "mqtt-broker",
+        "name": "MQTTBroker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "459bd2d2e3c31485",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "sensors",
+        "name": "MyInfluxDB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    }
+]
